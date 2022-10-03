@@ -3,7 +3,7 @@
 
 int main(int argc, char ** argv)
 {
-	if (argc < 1)
+	if (argc < 2)
 	{
 		printf("Refer to '%s -h' or '%s --help' for help.\n", argv[0], argv[0]);
 	}
@@ -11,14 +11,24 @@ int main(int argc, char ** argv)
 	{
 		if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0)
 		{
-			printf("%s, don't get this confused with GNU's. It does very similar stuff.\n  USAGE: %s <characters>\n", argv[1], argv[1]);
+			printf("%s, don't get this confused with GNU's. But, it does very similar stuff.\n  USAGE: %s <characters>\n", argv[0], argv[0]);
 			return 0;
 		}
 
 		if (argc > 2)
 		{
-			for ()
+			for (unsigned char i = 1; i < argc; i++)
+			{
+				printf("%s ", argv[i]);
+			}
+			printf("\n");
+
+			return 0;
 		}
+
+		printf("%s\n", argv[1]);
+
+		return 0;
 	}
 
 	return 0;
