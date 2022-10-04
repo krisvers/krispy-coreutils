@@ -11,7 +11,7 @@ int main(int argc, char ** argv)
 	{
 		if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0)
 		{
-			printf("%s, don't get this confused with GNU's. But, it does very similar stuff.\n  USAGE: %s <characters>\n", argv[0], argv[0]);
+			printf("%s, similar to GNU's counterpart but simpler.\n  USAGE: %s <characters>\n", argv[0], argv[0]);
 			return 0;
 		}
 

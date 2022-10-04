@@ -6,13 +6,16 @@ PREFIX := /usr
 
 all: clean proper build
 
-build: cat echo
+build: cat echo touch
 
 cat:
 	$(CC) cat.c -o $(BUILD_DIR)/cat
 
 echo:
 	$(CC) echo.c -o $(BUILD_DIR)/echo
+
+touch:
+	$(CC) touch.c -o $(BUILD_DIR)/touch
 
 clean:
 	rm -rf $(BUILD_DIR)
