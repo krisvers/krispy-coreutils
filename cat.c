@@ -4,7 +4,7 @@
 int main(int argc, char ** argv)
 {
 	FILE *fp;
-	char c;
+	char c = '\n';
 
 	if (argc < 2)
 	{
@@ -26,13 +26,15 @@ int main(int argc, char ** argv)
 			return -1;
 		}
 
-		while (c != EOF)
+		while (c != 255)
 		{
-			printf("%c", c);
+			fprintf(stdout, "%c", c);
 			c = fgetc(fp);
 		}
 
 		fclose(fp);
+
+		return 0;
 	}
 	if (argc > 2)
 	{
