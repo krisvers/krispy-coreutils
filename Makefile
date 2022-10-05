@@ -2,11 +2,11 @@ CC := gcc
 BUILD_DIR := build
 PREFIX := /usr
 
-.PHONY: all build clean install proper cat echo ls touch
+.PHONY: all build clean install proper cat echo ls touch mv
 
 all: clean proper build
 
-build: cat echo ls touch
+build: cat echo ls touch mv
 
 cat:
 	$(CC) cat.c -o $(BUILD_DIR)/cat
@@ -19,6 +19,9 @@ ls:
 
 touch:
 	$(CC) touch.c -o $(BUILD_DIR)/touch
+
+mv:
+	$(CC) mv.c -o $(BUILD_DIR)/mv
 
 clean:
 	rm -rf $(BUILD_DIR)

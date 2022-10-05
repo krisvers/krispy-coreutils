@@ -64,7 +64,7 @@ int main(int argc, char ** argv)
 		}
 
 		char extern_dir[1024];
-		printf("1%c\n", *argv[strlen]);
+		printf("1%c\n", *argv[strlen(*argv)]);
 		if (*argv[0] != '/')
 		{
 			printf("2\n");
